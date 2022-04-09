@@ -7,6 +7,13 @@ body {
   justify-content: flex-start;
   background: #333940;
 }
+/* Parent container */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 header, footer {
   padding: 40px;
@@ -14,9 +21,31 @@ header, footer {
   color: #fff;
 }
 
+/* Header */
+
 header h1 {
     color: #e867ed;
     font-size: 2.5em;
+}
+
+header p {
+  color: white;
+  justify-content: center;
+  display: block;
+  text-align: center;
+  margin: 10px;
+  padding: 5px 15% 0 15%;
+  line-height: 1.5em;
+}
+
+
+/* Section */
+
+section {
+  flex: 0 0 400px;
+  padding: 20px;
+  border: dashed white 1px;
+  margin: 0 10px 40px 10px;
 }
 
 section p {
@@ -34,33 +63,14 @@ section h2 {
     background-color: #333940;
 }
 
-header p {
-    color: white;
-    justify-content: center;
-    text-align: center;
+section h2 .hover {
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: insert 0px 0px 8px
+  rgba(232, 102, 236, 1), 0 0 15 px
+  rgba(232, 102, 236, 1);
 }
 
-nav {
-  display: flex;
-  background-color: #d8a47f;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-section {
-  flex: 0 0 400px;
-  padding: 20px;
-  border: dashed white 1px;
-  margin: 10px;
-}
-
-img {
-  width: 100%;
-}
 
 pre {
     border-radius: 10px;
@@ -72,6 +82,8 @@ pre:active {
     user-select: all;
 }
 
+/* Footer */
+
 footer {
   flex-shrink: 0;
   padding: 20px;
@@ -80,44 +92,12 @@ footer {
   margin-top: auto;
 }
 
+/* Class */
+
 .linear-gradient-background {
     background-image: linear-gradient(
     rgba(232, 102, 236, 0.3) 0%,
     rgba(232, 102, 236, 0.6) 100%);
 }
 
-/* Added some padding and styling for the photos */
-.photo {
-  padding: 20px 10px;
-  border: 2px solid #bfbfbf;
-  background-color: #fff;
-}
 
-/* We can use rotate to rotate the photo to the left or right */
-.rotate {
-  transform: rotate(7deg);
-}
-
-/* We can use scale to stretch the photo vertically or horizontally */
-.scale {
-  transform: scale(1.5, 1);
-}
-
-/* We can use skew to skew the photo to the left or right */
-.skew {
-  transform: skew(15deg);
-}
-
-@media screen and (max-width: 768px) {
-  main,
-  nav {
-    flex-direction: column;
-  }
-  header {
-    background: #772014;
-  }
-  nav,
-  footer {
-    background-color: #bb8588;
-  }
-}
